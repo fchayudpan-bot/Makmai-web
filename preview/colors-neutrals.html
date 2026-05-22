@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .title { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .sub { color: var(--ink-600); font-size: 12px; margin-bottom: 14px; }
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 12px; }
+  .row-ink { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .sw { min-height: 84px; border-radius: 12px; padding: 12px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(0,0,0,0.04); }
+  .sw .lab { font-size: 11px; font-weight: 600; }
+  .sw .hex { font-family: var(--font-mono); font-size: 10px; opacity: 0.7; }
+  .sw .role { font-size: 10px; opacity: 0.6; }
+  .h { font-family: var(--font-display); font-size: 12px; font-weight: 700; margin-bottom: 6px; color: var(--ink-800); }
+</style></head>
+<body>
+  <div class="title">Neutrals — cream, sand, ink</div>
+  <div class="sub">Warm palette only. No cold grays. The page background is <code class="hex" style="font-size:11px">cream-50</code> — never pure white.</div>
+
+  <div class="h">Surfaces & borders</div>
+  <div class="row">
+    <div class="sw" style="background:#FDFAF2;color:#1A1815"><span class="lab">cream-50</span><span class="role">page bg</span><span class="hex">#FDFAF2</span></div>
+    <div class="sw" style="background:#FAF6EC;color:#1A1815"><span class="lab">cream-100</span><span class="role">card surface</span><span class="hex">#FAF6EC</span></div>
+    <div class="sw" style="background:#F4ECD8;color:#1A1815"><span class="lab">cream-200</span><span class="role">sunken</span><span class="hex">#F4ECD8</span></div>
+    <div class="sw" style="background:#E8DDC2;color:#1A1815"><span class="lab">cream-300</span><span class="role">border</span><span class="hex">#E8DDC2</span></div>
+  </div>
+
+  <div class="h">Sand & ink</div>
+  <div class="row-ink">
+    <div class="sw" style="background:#C9BBA0;color:#2A2620"><span class="lab">sand-400</span><span class="role">strong border</span><span class="hex">#C9BBA0</span></div>
+    <div class="sw" style="background:#6B6357;color:#fff"><span class="lab">ink-600</span><span class="role">muted body</span><span class="hex">#6B6357</span></div>
+    <div class="sw" style="background:#4A4339;color:#fff"><span class="lab">ink-700</span><span class="role">secondary text</span><span class="hex">#4A4339</span></div>
+    <div class="sw" style="background:#1A1815;color:#fff"><span class="lab">ink-900</span><span class="role">headlines</span><span class="hex">#1A1815</span></div>
+  </div>
+</body></html>

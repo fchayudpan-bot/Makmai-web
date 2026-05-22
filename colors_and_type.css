@@ -1,0 +1,277 @@
+/* ==========================================================================
+   Makmai Design System — Colors & Type
+   Brand: หมากไม้ (Makmai) — Isan word for "fruit"
+   Cold-pressed juices, smoothies, salads, healthy meals
+   ========================================================================== */
+
+/* ---------- Webfonts (Google Fonts — Thai + Latin support) ---------------- */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=IBM+Plex+Sans+Thai+Looped:wght@300;400;500;600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* ====================================================================
+     COLORS — sampled directly from the Makmai logo (#006030 / #603000)
+     ==================================================================== */
+
+  /* Primary — Forest (logo green) */
+  --forest-50:  #EAF3EE;
+  --forest-100: #CFE4D8;
+  --forest-200: #9CC8B0;
+  --forest-300: #6BAC89;
+  --forest-400: #3B9162;
+  --forest-500: #006030;  /* base — pulled from logo */
+  --forest-600: #00532A;
+  --forest-700: #004523;
+  --forest-800: #00351B;
+  --forest-900: #002413;
+
+  /* Secondary — Bark (logo brown) */
+  --bark-50:  #F7EFE3;
+  --bark-100: #EAD3B0;
+  --bark-200: #D0A87A;
+  --bark-300: #A87445;
+  --bark-400: #7E4A1A;
+  --bark-500: #603000;  /* base — pulled from logo */
+  --bark-600: #532900;
+  --bark-700: #432100;
+  --bark-800: #331900;
+  --bark-900: #221100;
+
+  /* Accent — Citrus (juice / call-to-action highlights) */
+  --citrus-50:  #FCF1E6;
+  --citrus-100: #FADBBE;
+  --citrus-200: #F5B785;
+  --citrus-300: #EE934E;
+  --citrus-400: #E07A2D;   /* base */
+  --citrus-500: #C8651D;
+  --citrus-600: #A55117;
+
+  /* Warm semantic — Berry (sale / spicy / dessert) */
+  --berry-400: #C9514E;
+  --berry-500: #B33A3A;
+  --berry-600: #962A2A;
+
+  /* Neutrals — warm cream / sand (NOT cold gray) */
+  --cream-50:  #FDFAF2;   /* page background light mode */
+  --cream-100: #FAF6EC;   /* card background, default surface */
+  --cream-200: #F4ECD8;
+  --cream-300: #E8DDC2;
+  --sand-400:  #C9BBA0;
+  --sand-500:  #A89A82;
+  --ink-600:   #6B6357;   /* muted body */
+  --ink-700:   #4A4339;   /* secondary text */
+  --ink-800:   #2A2620;   /* primary text */
+  --ink-900:   #1A1815;   /* headlines */
+
+  /* Dark-mode surfaces */
+  --night-900: #11100C;   /* page bg dark */
+  --night-800: #1A1812;   /* surface dark */
+  --night-700: #2A2620;   /* elevated surface */
+  --night-600: #3A3530;   /* border on dark */
+
+  /* Semantic — full success / warning / danger / info */
+  --success: var(--forest-500);
+  --warning: #E0A92D;
+  --danger:  var(--berry-500);
+  --info:    #2E6F8E;
+
+  /* ====================================================================
+     SEMANTIC TOKENS — light mode (default)
+     ==================================================================== */
+  --bg:          var(--cream-50);
+  --bg-elev:     var(--cream-100);
+  --bg-sunken:   var(--cream-200);
+  --surface:     #FFFFFF;
+  --surface-alt: var(--cream-100);
+
+  --fg:          var(--ink-900);
+  --fg-strong:   var(--ink-900);
+  --fg-body:     var(--ink-800);
+  --fg-muted:    var(--ink-600);
+  --fg-on-brand: #FFFFFF;
+  --fg-on-cream: var(--forest-500);
+
+  --border:        var(--cream-300);
+  --border-strong: var(--sand-400);
+  --border-brand:  var(--forest-500);
+
+  --brand:        var(--forest-500);
+  --brand-strong: var(--forest-700);
+  --brand-soft:   var(--forest-50);
+  --accent:       var(--citrus-400);
+  --accent-soft:  var(--citrus-50);
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 3px rgb(0 96 48 / 0.35);
+
+  /* ====================================================================
+     TYPE — Bai Jamjuree (display) + IBM Plex Sans Thai Looped (body)
+     Both fully support Thai + Latin scripts.
+     ==================================================================== */
+  --font-display: 'Bai Jamjuree', 'IBM Plex Sans Thai Looped', 'Helvetica Neue', sans-serif;
+  --font-body:    'IBM Plex Sans Thai Looped', 'Bai Jamjuree', system-ui, sans-serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Type scale — generous, modern */
+  --fs-xs:    12px;   --lh-xs: 1.45;
+  --fs-sm:    14px;   --lh-sm: 1.5;
+  --fs-base:  16px;   --lh-base: 1.6;
+  --fs-md:    18px;   --lh-md: 1.55;
+  --fs-lg:    20px;   --lh-lg: 1.45;
+  --fs-xl:    24px;   --lh-xl: 1.35;
+  --fs-2xl:   30px;   --lh-2xl: 1.3;
+  --fs-3xl:   38px;   --lh-3xl: 1.2;
+  --fs-4xl:   48px;   --lh-4xl: 1.1;
+  --fs-5xl:   64px;   --lh-5xl: 1.05;
+  --fs-6xl:   80px;   --lh-6xl: 1.0;
+
+  --fw-light:    300;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  --tracking-tight:  -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;
+  --tracking-caps:    0.12em;
+
+  /* ====================================================================
+     SPACING — 4px base. Generous breathing room.
+     ==================================================================== */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* ====================================================================
+     RADII — soft, organic. We never use sharp corners except hairlines.
+     ==================================================================== */
+  --radius-xs:   4px;
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-2xl:  32px;
+  --radius-pill: 999px;
+
+  /* ====================================================================
+     SHADOWS — soft, warm-tinted (avoid blue-gray drop shadows)
+     ==================================================================== */
+  --shadow-xs: 0 1px 2px rgb(64 40 16 / 0.06);
+  --shadow-sm: 0 2px 6px rgb(64 40 16 / 0.06), 0 1px 2px rgb(64 40 16 / 0.04);
+  --shadow-md: 0 6px 18px rgb(64 40 16 / 0.08), 0 2px 4px rgb(64 40 16 / 0.04);
+  --shadow-lg: 0 16px 36px rgb(64 40 16 / 0.10), 0 4px 10px rgb(64 40 16 / 0.05);
+  --shadow-xl: 0 24px 60px rgb(64 40 16 / 0.14), 0 8px 16px rgb(64 40 16 / 0.06);
+
+  /* Inner / focus rings */
+  --ring-inset:   inset 0 0 0 1px var(--border);
+  --ring-brand:   0 0 0 4px rgb(0 96 48 / 0.16);
+
+  /* Motion — gentle, never bouncy */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:   140ms;
+  --dur-base:   220ms;
+  --dur-slow:   360ms;
+}
+
+/* ---------- Dark mode override ------------------------------------------- */
+:root[data-theme="dark"], .theme-dark {
+  --bg:          var(--night-900);
+  --bg-elev:     var(--night-800);
+  --bg-sunken:   #0B0A07;
+  --surface:     var(--night-800);
+  --surface-alt: var(--night-700);
+
+  --fg:          var(--cream-100);
+  --fg-strong:   #FFFFFF;
+  --fg-body:     var(--cream-100);
+  --fg-muted:    #A89A82;
+  --fg-on-brand: #FFFFFF;
+  --fg-on-cream: var(--forest-300);
+
+  --border:        var(--night-600);
+  --border-strong: #4A4339;
+  --border-brand:  var(--forest-300);
+
+  --brand:        var(--forest-300);
+  --brand-strong: var(--forest-200);
+  --brand-soft:   #0E2A1B;
+  --accent:       var(--citrus-300);
+  --accent-soft:  #2A1A0E;
+
+  --shadow-xs: 0 1px 2px rgb(0 0 0 / 0.40);
+  --shadow-sm: 0 2px 6px rgb(0 0 0 / 0.40);
+  --shadow-md: 0 6px 18px rgb(0 0 0 / 0.50);
+  --shadow-lg: 0 16px 36px rgb(0 0 0 / 0.55);
+}
+
+/* ==========================================================================
+   SEMANTIC TYPE STYLES — apply directly via class
+   ========================================================================== */
+.h-display, .h1, .h2, .h3, .h4 {
+  font-family: var(--font-display);
+  color: var(--fg-strong);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-tight);
+  text-wrap: balance;
+}
+
+.h-display { font-size: clamp(48px, 7vw, var(--fs-6xl)); line-height: var(--lh-6xl); font-weight: var(--fw-bold); }
+.h1        { font-size: clamp(36px, 5vw, var(--fs-5xl)); line-height: var(--lh-5xl); font-weight: var(--fw-bold); }
+.h2        { font-size: clamp(28px, 4vw, var(--fs-4xl)); line-height: var(--lh-4xl); }
+.h3        { font-size: var(--fs-3xl); line-height: var(--lh-3xl); }
+.h4        { font-size: var(--fs-2xl); line-height: var(--lh-2xl); }
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+.lede {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  line-height: var(--lh-md);
+  color: var(--fg-body);
+  text-wrap: pretty;
+}
+
+.body, p {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+  color: var(--fg-body);
+}
+
+.body-sm { font-size: var(--fs-sm); line-height: var(--lh-sm); color: var(--fg-muted); }
+.caption { font-size: var(--fs-xs); line-height: var(--lh-xs); color: var(--fg-muted); }
+.price   { font-family: var(--font-display); font-weight: var(--fw-bold); font-variant-numeric: tabular-nums; }
+.mono, code { font-family: var(--font-mono); font-size: 0.92em; }
+
+/* ==========================================================================
+   BASE RESET (light)
+   ========================================================================== */
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--forest-100); color: var(--forest-900); }

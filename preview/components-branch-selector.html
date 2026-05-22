@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 24px 32px; }
+  .head { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .sub { color: var(--ink-600); font-size: 12px; margin-bottom: 18px; }
+  .selector { background: #fff; border: 1px solid var(--cream-300); border-radius: 16px; padding: 8px; box-shadow: 0 6px 18px rgb(64 40 16 / 0.08); max-width: 560px; }
+  .selector .hint { padding: 8px 10px 6px; font-family: var(--font-body); font-size: 11px; color: var(--ink-600); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+  .opt { display: flex; align-items: center; gap: 14px; padding: 14px 14px; border-radius: 12px; cursor: pointer; transition: all 140ms cubic-bezier(0.22,1,0.36,1); }
+  .opt:hover { background: var(--cream-100); }
+  .opt.active { background: var(--forest-50); }
+  .pin { width: 44px; height: 44px; border-radius: 12px; background: var(--forest-50); color: var(--forest-500); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+  .opt.active .pin { background: var(--forest-500); color: #fff; }
+  .info { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+  .name { font-family: var(--font-display); font-weight: 600; font-size: 15px; color: var(--ink-900); }
+  .addr { font-family: var(--font-body); font-size: 12.5px; color: var(--ink-600); }
+  .meta { display: flex; align-items: center; gap: 10px; font-family: var(--font-body); font-size: 11.5px; color: var(--ink-700); flex-shrink: 0; }
+  .meta .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--forest-500); }
+  .meta .closed { background: var(--berry-500); }
+  .check { width: 22px; height: 22px; border-radius: 50%; background: var(--forest-500); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+  .opt:not(.active) .check { display: none; }
+  hr { border: none; border-top: 1px dashed var(--cream-300); margin: 2px 6px; }
+</style></head>
+<body>
+  <div class="head">Branch selector</div>
+  <div class="sub">Two locations. Active state is the soft forest tint, not a heavy outline.</div>
+
+  <div class="selector">
+    <div class="hint">เลือกสาขา · CHOOSE BRANCH</div>
+    <div class="opt active">
+      <div class="pin">📍</div>
+      <div class="info"><span class="name">สาขาขอนแก่น</span><span class="addr">Khon Kaen · ถ.มิตรภาพ · 08:00–20:00</span></div>
+      <div class="meta"><span class="dot"></span>เปิดอยู่</div>
+      <div class="check">✓</div>
+    </div>
+    <hr/>
+    <div class="opt">
+      <div class="pin">📍</div>
+      <div class="info"><span class="name">สาขากาฬสินธุ์</span><span class="addr">Kalasin · ใจกลางเมือง · 09:00–19:00</span></div>
+      <div class="meta"><span class="dot"></span>เปิดอยู่</div>
+      <div class="check">✓</div>
+    </div>
+  </div>
+</body></html>

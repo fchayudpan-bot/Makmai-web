@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .title { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .sub { color: var(--ink-600); font-size: 12px; margin-bottom: 14px; }
+  .scale { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+  .swatch { min-height: 78px; padding: 10px; border-radius: 10px; display: flex; flex-direction: column; justify-content: space-between; }
+  .swatch .step { font-size: 10px; font-weight: 700; opacity: 0.85; }
+  .swatch .hex { font-size: 9.5px; font-family: var(--font-mono); opacity: 0.85; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+  .group { background: var(--cream-100); border: 1px solid var(--cream-300); border-radius: 12px; padding: 12px; }
+  .group h4 { font-family: var(--font-display); font-size: 12px; font-weight: 700; margin-bottom: 8px; color: var(--ink-800); }
+</style></head>
+<body>
+  <div class="title">Accent & semantic — Citrus / Berry</div>
+  <div class="sub">Citrus drives upsell + discount highlights. Berry is reserved for sale tags & danger.</div>
+  <div class="pair">
+    <div class="group">
+      <h4>Citrus — citrus-50 → citrus-600</h4>
+      <div class="scale" style="grid-template-columns:repeat(7,1fr)">
+        <div class="swatch" style="background:#FCF1E6;color:#A55117"><span class="step">50</span><span class="hex">#FCF1E6</span></div>
+        <div class="swatch" style="background:#FADBBE;color:#A55117"><span class="step">100</span><span class="hex">#FADBBE</span></div>
+        <div class="swatch" style="background:#F5B785;color:#A55117"><span class="step">200</span><span class="hex">#F5B785</span></div>
+        <div class="swatch" style="background:#EE934E;color:#fff"><span class="step">300</span><span class="hex">#EE934E</span></div>
+        <div class="swatch" style="background:#E07A2D;color:#fff;outline:2px solid #fff;outline-offset:-4px"><span class="step">400 ★</span><span class="hex">#E07A2D</span></div>
+        <div class="swatch" style="background:#C8651D;color:#fff"><span class="step">500</span><span class="hex">#C8651D</span></div>
+        <div class="swatch" style="background:#A55117;color:#fff"><span class="step">600</span><span class="hex">#A55117</span></div>
+      </div>
+    </div>
+    <div class="group">
+      <h4>Berry — sale / danger / warmth</h4>
+      <div class="scale" style="grid-template-columns:repeat(3,1fr)">
+        <div class="swatch" style="background:#C9514E;color:#fff"><span class="step">400</span><span class="hex">#C9514E</span></div>
+        <div class="swatch" style="background:#B33A3A;color:#fff;outline:2px solid #fff;outline-offset:-4px"><span class="step">500 ★</span><span class="hex">#B33A3A</span></div>
+        <div class="swatch" style="background:#962A2A;color:#fff"><span class="step">600</span><span class="hex">#962A2A</span></div>
+      </div>
+      <div class="hex" style="margin-top:10px;font-size:11px;color:var(--ink-600);line-height:1.5">Use on <strong style="color:var(--ink-900)">cream-50</strong> for badges. Avoid pairing berry with citrus — they fight.</div>
+    </div>
+  </div>
+</body></html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 24px 32px; }
+  .head { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .sub { color: var(--ink-600); font-size: 12px; margin-bottom: 18px; }
+
+  .strip { background: linear-gradient(135deg, var(--citrus-50) 0%, var(--cream-100) 100%); border: 1px solid var(--citrus-100); border-radius: 18px; padding: 16px 18px; }
+  .strip-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
+  .strip-title { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--ink-900); }
+  .strip-title .accent { color: var(--citrus-500); }
+  .strip-meta { font-family: var(--font-body); font-size: 11px; color: var(--ink-600); }
+  .items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .item { background: #fff; border-radius: 12px; padding: 10px; display: flex; gap: 10px; align-items: center; border: 1px solid rgba(0,0,0,0.04); }
+  .thumb { width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0; }
+  .thumb.salad { background: linear-gradient(135deg, #B9D690, #6B9F4F); }
+  .thumb.protein { background: linear-gradient(135deg, #D9B583, #8B5A2A); }
+  .thumb.shot { background: linear-gradient(135deg, #FFB36B, #C8651D); }
+  .item .info { flex: 1; min-width: 0; }
+  .item .n { font-family: var(--font-display); font-weight: 600; font-size: 12.5px; color: var(--ink-900); line-height: 1.2; }
+  .item .p { font-family: var(--font-display); font-weight: 700; font-size: 13px; color: var(--forest-500); font-variant-numeric: tabular-nums; margin-top: 4px; }
+  .item .add { width: 26px; height: 26px; border-radius: 999px; background: var(--citrus-400); color: #fff; border: none; cursor: pointer; font-size: 15px; line-height: 1; flex-shrink: 0; }
+</style></head>
+<body>
+  <div class="head">Upsell strip — "Pair with this"</div>
+  <div class="sub">Appears in cart drawer + product detail. Citrus palette to feel like a friendly suggestion, not a hard sell.</div>
+
+  <div class="strip">
+    <div class="strip-head">
+      <div class="strip-title"><span class="accent">+ จับคู่กับน้ำแครอท</span> เพิ่ม AOV ด้วยเมนูยอดนิยม</div>
+      <div class="strip-meta">3 / 6 รายการ</div>
+    </div>
+    <div class="items">
+      <div class="item"><div class="thumb salad"></div><div class="info"><div class="n">สลัดอกไก่ย่าง</div><div class="p">฿145</div></div><button class="add">+</button></div>
+      <div class="item"><div class="thumb protein"></div><div class="info"><div class="n">โบลว์โปรตีน</div><div class="p">฿135</div></div><button class="add">+</button></div>
+      <div class="item"><div class="thumb shot"></div><div class="info"><div class="n">Ginger shot</div><div class="p">฿45</div></div><button class="add">+</button></div>
+    </div>
+  </div>
+</body></html>

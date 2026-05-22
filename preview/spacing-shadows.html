@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 28px 32px; background: var(--cream-50); }
+  .head { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .sub { color: var(--ink-600); font-size: 12px; margin-bottom: 22px; }
+  .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .card { width: 84px; height: 84px; background: #fff; border-radius: 14px; border: 1px solid rgba(0,0,0,0.02); }
+  .lab { font-family: var(--font-mono); font-size: 10px; color: var(--ink-700); font-weight: 600; }
+</style></head>
+<body>
+  <div class="head">Elevation — warm-tinted shadows</div>
+  <div class="sub">Shadows use <code style="font-family:var(--font-mono);font-size:11px">rgb(64 40 16 / α)</code> — never blue-gray. They read like real shadows on cream paper.</div>
+  <div class="grid">
+    <div class="item"><div class="card" style="box-shadow:0 1px 2px rgb(64 40 16 / 0.06)"></div><span class="lab">shadow-xs</span></div>
+    <div class="item"><div class="card" style="box-shadow:0 2px 6px rgb(64 40 16 / 0.06), 0 1px 2px rgb(64 40 16 / 0.04)"></div><span class="lab">shadow-sm</span></div>
+    <div class="item"><div class="card" style="box-shadow:0 6px 18px rgb(64 40 16 / 0.08), 0 2px 4px rgb(64 40 16 / 0.04)"></div><span class="lab">shadow-md</span></div>
+    <div class="item"><div class="card" style="box-shadow:0 16px 36px rgb(64 40 16 / 0.10), 0 4px 10px rgb(64 40 16 / 0.05)"></div><span class="lab">shadow-lg</span></div>
+    <div class="item"><div class="card" style="box-shadow:0 24px 60px rgb(64 40 16 / 0.14), 0 8px 16px rgb(64 40 16 / 0.06)"></div><span class="lab">shadow-xl</span></div>
+  </div>
+</body></html>

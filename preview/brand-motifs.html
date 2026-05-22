@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 28px 32px; }
+  .head { font-family: var(--font-display); font-weight: 700; font-size: 18px; color: var(--ink-900); margin-bottom: 6px; }
+  .sub { color: var(--ink-600); font-size: 13px; margin-bottom: 18px; }
+  .row-motif { display: flex; align-items: center; gap: 40px; padding: 18px 0; }
+  .motif { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .motif .what { font-size: 11px; font-weight: 600; color: var(--ink-700); letter-spacing: 0.06em; text-transform: uppercase; }
+  /* Isan triangle cluster */
+  .triangles { display: inline-flex; gap: 6px; color: var(--forest-500); font-size: 18px; }
+  .branch { color: var(--bark-500); font-family: var(--font-display); font-weight: 700; font-size: 28px; letter-spacing: -0.02em; }
+  /* Berry sprig (the small cluster below logo) — emulated with dots */
+  .berries { display: flex; align-items: flex-start; gap: 2px; }
+  .berries .stem { width: 2px; height: 28px; background: var(--bark-500); border-radius: 2px; transform: rotate(8deg); margin-right: 4px; align-self: flex-end; }
+  .berries .dots { display: grid; grid-template-columns: repeat(3, 8px); gap: 3px; padding-top: 6px; }
+  .berries .dots span { width: 8px; height: 8px; border-radius: 50%; background: var(--forest-500); }
+  /* Sample usage strip */
+  .usage { margin-top: 18px; padding: 14px 16px; border: 1px dashed var(--cream-300); border-radius: 12px; display: flex; align-items: center; justify-content: space-between; }
+  .usage .left { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 600; color: var(--ink-800); font-size: 15px; }
+  .usage .iso { display: inline-flex; gap: 4px; color: var(--forest-500); font-size: 14px; }
+</style></head>
+<body>
+  <div class="head">Brand motifs</div>
+  <div class="sub">Visual fragments lifted from the logo — use sparingly, as ornament not pattern.</div>
+
+  <div class="row-motif">
+    <div class="motif">
+      <div class="triangles">▲ · ▲ · ▲</div>
+      <div class="what">Isan dot-triangle cluster</div>
+    </div>
+    <div class="motif">
+      <svg width="120" height="40" viewBox="0 0 120 40"><path d="M4 28 Q 30 8, 60 18 T 116 14" stroke="#603000" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="14" cy="22" r="3" fill="#006030"/><path d="M14 22 q -4 -6 0 -10 q 5 2 0 10" fill="#006030"/></svg>
+      <div class="what">Hand-drawn branch + leaf</div>
+    </div>
+    <div class="motif">
+      <div class="berries"><div class="stem"></div><div class="dots"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+      <div class="what">Berry sprig</div>
+    </div>
+  </div>
+
+  <div class="usage">
+    <div class="left">หมวดน้ำผลไม้ <span class="iso">▲ · ▲</span></div>
+    <div class="hex">section header in use</div>
+  </div>
+</body></html>

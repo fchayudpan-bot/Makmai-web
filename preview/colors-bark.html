@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .title { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .sub { color: var(--ink-600); font-size: 12px; margin-bottom: 14px; }
+  .scale { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; }
+  .swatch { min-height: 78px; padding: 10px; border-radius: 10px; display: flex; flex-direction: column; justify-content: space-between; }
+  .swatch .step { font-size: 10px; font-weight: 700; opacity: 0.85; }
+  .swatch .hex { font-size: 9.5px; font-family: var(--font-mono); opacity: 0.85; }
+</style></head>
+<body>
+  <div class="title">Bark — secondary earthy brown <span class="hex" style="font-family:var(--font-mono);font-weight:400;font-size:11px;color:var(--ink-600);">bark-50 → bark-900</span></div>
+  <div class="sub">Sampled directly from the logo's branch (#603000). Used for secondary actions, body anchors, and Thai display accents.</div>
+  <div class="scale">
+    <div class="swatch" style="background:#F7EFE3;color:#331900"><span class="step">50</span><span class="hex">#F7EFE3</span></div>
+    <div class="swatch" style="background:#EAD3B0;color:#331900"><span class="step">100</span><span class="hex">#EAD3B0</span></div>
+    <div class="swatch" style="background:#D0A87A;color:#331900"><span class="step">200</span><span class="hex">#D0A87A</span></div>
+    <div class="swatch" style="background:#A87445;color:#fff"><span class="step">300</span><span class="hex">#A87445</span></div>
+    <div class="swatch" style="background:#7E4A1A;color:#fff"><span class="step">400</span><span class="hex">#7E4A1A</span></div>
+    <div class="swatch" style="background:#603000;color:#fff;outline:2px solid #fff;outline-offset:-4px"><span class="step">500 ★</span><span class="hex">#603000</span></div>
+    <div class="swatch" style="background:#532900;color:#fff"><span class="step">600</span><span class="hex">#532900</span></div>
+    <div class="swatch" style="background:#432100;color:#fff"><span class="step">700</span><span class="hex">#432100</span></div>
+    <div class="swatch" style="background:#331900;color:#fff"><span class="step">800</span><span class="hex">#331900</span></div>
+    <div class="swatch" style="background:#221100;color:#fff"><span class="step">900</span><span class="hex">#221100</span></div>
+  </div>
+</body></html>

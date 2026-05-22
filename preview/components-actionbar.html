@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 24px 32px; background: var(--cream-100); }
+  .head { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .sub { color: var(--ink-600); font-size: 12px; margin-bottom: 22px; }
+  .stage { display: flex; gap: 24px; align-items: flex-end; }
+
+  /* Mobile bottom action bar */
+  .phone { width: 280px; height: 200px; background: var(--cream-50); border-radius: 22px; box-shadow: 0 16px 36px rgb(64 40 16 / 0.10); position: relative; overflow: hidden; border: 1px solid var(--cream-300); }
+  .phone .fake { padding: 16px 16px 100px; font-family: var(--font-body); font-size: 11px; color: var(--ink-600); line-height: 1.5; }
+  .phone .fake h3 { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--ink-900); margin-bottom: 6px; }
+  .actionbar { position: absolute; left: 0; right: 0; bottom: 0; background: #fff; padding: 12px 14px calc(12px + env(safe-area-inset-bottom, 0)); border-top: 1px solid var(--cream-300); display: flex; gap: 10px; align-items: center; box-shadow: 0 -8px 24px rgb(64 40 16 / 0.06); }
+  .actionbar .summary { flex: 1; }
+  .actionbar .label { font-family: var(--font-body); font-size: 10.5px; color: var(--ink-600); }
+  .actionbar .total { font-family: var(--font-display); font-weight: 700; font-size: 17px; color: var(--ink-900); font-variant-numeric: tabular-nums; }
+  .actionbar .cta { background: var(--forest-500); color: #fff; border: none; padding: 11px 18px; border-radius: 999px; font-family: var(--font-display); font-weight: 600; font-size: 14px; cursor: pointer; box-shadow: 0 4px 10px rgb(0 36 16 / 0.25); }
+
+  /* Toast */
+  .toasts { display: flex; flex-direction: column; gap: 10px; min-width: 260px; }
+  .toast { background: var(--ink-900); color: var(--cream-50); padding: 12px 14px; border-radius: 14px; font-family: var(--font-body); font-size: 13px; display: flex; align-items: center; gap: 10px; box-shadow: 0 12px 30px rgb(0 0 0 / 0.25); }
+  .toast.success { background: var(--forest-700); }
+  .toast.error { background: var(--berry-600); }
+  .toast .ic { font-size: 16px; }
+</style></head>
+<body>
+  <div class="head">Sticky action bar · Toasts</div>
+  <div class="sub">Mobile-first checkout primitive. Bottom bar is always visible during the 3-click flow.</div>
+
+  <div class="stage">
+    <div class="phone">
+      <div class="fake">
+        <h3>ตะกร้าของคุณ</h3>
+        <div>น้ำส้มแครอท ขิงสด × 2</div>
+        <div>น้ำคลอโรฟิลล์ × 1</div>
+        <div style="color:var(--forest-500); margin-top:8px">+ จับคู่กับสลัดอกไก่ย่าง</div>
+      </div>
+      <div class="actionbar">
+        <div class="summary"><div class="label">3 รายการ · รวม</div><div class="total">฿273</div></div>
+        <button class="cta">ชำระเงิน →</button>
+      </div>
+    </div>
+
+    <div class="toasts">
+      <div class="toast success"><span class="ic">🌱</span>เพิ่มในตะกร้าแล้ว · Added</div>
+      <div class="toast"><span class="ic">📍</span>เปลี่ยนสาขาเป็นขอนแก่นแล้ว</div>
+      <div class="toast error"><span class="ic">⚠</span>เมนูนี้หมดแล้ววันนี้</div>
+    </div>
+  </div>
+</body></html>

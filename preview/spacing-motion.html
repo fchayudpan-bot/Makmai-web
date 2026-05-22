@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 28px 32px; }
+  .head { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .sub { color: var(--ink-600); font-size: 12px; margin-bottom: 18px; }
+  .row { display: grid; grid-template-columns: 100px 1fr 110px; gap: 14px; align-items: center; padding: 10px 0; border-bottom: 1px dashed var(--cream-300); }
+  .row:last-child { border-bottom: none; }
+  .lab { font-family: var(--font-mono); font-size: 11px; color: var(--ink-700); font-weight: 600; }
+  .meta { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-600); text-align: right; }
+  .track { position: relative; height: 8px; background: var(--cream-200); border-radius: 999px; overflow: hidden; }
+  .dot { position: absolute; top: -4px; width: 16px; height: 16px; border-radius: 50%; background: var(--forest-500); animation-iteration-count: infinite; animation-direction: alternate; }
+  .ease-out  { animation: slide 1.4s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1)); }
+  .ease-io   { animation: slide 1.4s cubic-bezier(0.65, 0, 0.35, 1); }
+  .ease-fast { animation: slide 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+  .ease-slow { animation: slide 2.2s cubic-bezier(0.22, 1, 0.36, 1); }
+  @keyframes slide { from { left: 0 } to { left: calc(100% - 16px) } }
+</style></head>
+<body>
+  <div class="head">Motion — gentle, never bouncy</div>
+  <div class="sub">Single easing for everything: <code class="lab" style="font-size:11px">cubic-bezier(0.22, 1, 0.36, 1)</code>. No springs, no overshoots.</div>
+
+  <div class="row"><span class="lab">dur-fast</span><div class="track"><div class="dot ease-fast"></div></div><span class="meta">140ms · hover</span></div>
+  <div class="row"><span class="lab">dur-base</span><div class="track"><div class="dot ease-out"></div></div><span class="meta">220ms · sheets</span></div>
+  <div class="row"><span class="lab">dur-slow</span><div class="track"><div class="dot ease-slow"></div></div><span class="meta">360ms · page</span></div>
+  <div class="row"><span class="lab">ease-in-out</span><div class="track"><div class="dot ease-io"></div></div><span class="meta">crossfades</span></div>
+</body></html>

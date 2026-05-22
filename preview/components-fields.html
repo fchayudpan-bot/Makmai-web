@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 28px 32px; }
+  .head { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .sub { color: var(--ink-600); font-size: 12px; margin-bottom: 18px; }
+  .group-label { font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-600); margin-bottom: 8px; margin-top: 14px; }
+  .field { display: flex; flex-direction: column; gap: 6px; max-width: 340px; }
+  .field label { font-family: var(--font-body); font-size: 12px; font-weight: 600; color: var(--ink-800); }
+  .input { font-family: var(--font-body); font-size: 14px; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--cream-300); background: #fff; color: var(--ink-900); width: 100%; transition: all 140ms cubic-bezier(0.22,1,0.36,1); }
+  .input::placeholder { color: var(--ink-600); }
+  .input:focus, .input.focused { outline: none; border-color: var(--forest-500); box-shadow: 0 0 0 4px rgb(0 96 48 / 0.16); }
+  .input.error { border-color: var(--berry-500); box-shadow: 0 0 0 4px rgb(179 58 58 / 0.16); }
+  .help { font-family: var(--font-body); font-size: 12px; color: var(--ink-600); }
+  .help.err { color: var(--berry-500); }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .with-prefix { position: relative; }
+  .with-prefix .prefix { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--ink-600); font-family: var(--font-body); font-size: 14px; font-weight: 600; }
+  .with-prefix .input { padding-left: 36px; }
+  .ic { width: 14px; height: 14px; vertical-align: -2px; }
+</style></head>
+<body>
+  <div class="head">Form fields</div>
+  <div class="sub">Rest · focused · error · with prefix. 12px radius, generous padding, warm focus ring.</div>
+
+  <div class="row">
+    <div class="field">
+      <label>เบอร์โทรศัพท์ / Phone</label>
+      <input class="input" placeholder="08X-XXX-XXXX" />
+      <div class="help">เราจะส่ง OTP เพื่อยืนยันการสั่ง</div>
+    </div>
+    <div class="field">
+      <label>อีเมล / Email <span style="color:var(--forest-500)">— focused</span></label>
+      <input class="input focused" value="cha@makmai.co" />
+      <div class="help">ใบเสร็จจะถูกส่งไปที่นี่</div>
+    </div>
+  </div>
+
+  <div class="group-label" style="margin-top:18px">Error · prefix</div>
+  <div class="row">
+    <div class="field">
+      <label>ที่อยู่จัดส่ง</label>
+      <input class="input error" value="กรุณากรอกที่อยู่" />
+      <div class="help err">⚠ ต้องระบุที่อยู่สำหรับจัดส่ง</div>
+    </div>
+    <div class="field">
+      <label>ส่วนลด / Promo</label>
+      <div class="with-prefix"><span class="prefix">฿</span><input class="input" placeholder="ใส่โค้ดส่วนลด" /></div>
+      <div class="help">ลองโค้ด <code style="font-family:var(--font-mono);color:var(--citrus-500)">MAKMAI20</code></div>
+    </div>
+  </div>
+</body></html>

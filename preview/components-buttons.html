@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 28px 32px; }
+  .head { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .sub { color: var(--ink-600); font-size: 12px; margin-bottom: 18px; }
+  .group { margin-bottom: 18px; }
+  .group-label { font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-600); margin-bottom: 10px; }
+  .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .btn { font-family: var(--font-display); font-weight: 600; font-size: 14px; padding: 11px 22px; border-radius: 999px; cursor: pointer; border: none; display: inline-flex; align-items: center; gap: 8px; transition: all 140ms cubic-bezier(0.22,1,0.36,1); letter-spacing: 0; }
+  .btn-primary  { background: var(--forest-500); color: #fff; box-shadow: 0 1px 2px rgb(0 36 16 / 0.2); }
+  .btn-primary.hover { background: var(--forest-600); }
+  .btn-primary.pressed { background: var(--forest-700); transform: scale(0.98); }
+  .btn-primary.disabled { background: var(--forest-500); opacity: 0.4; cursor: not-allowed; }
+  .btn-secondary { background: var(--cream-100); color: var(--bark-500); box-shadow: inset 0 0 0 1px var(--cream-300); }
+  .btn-secondary.hover { background: var(--cream-200); }
+  .btn-ghost { background: transparent; color: var(--forest-500); }
+  .btn-ghost.hover { background: var(--forest-50); }
+  .btn-pill { border-radius: 999px; } /* default is now pill — kept as alias */
+  .btn-citrus { background: var(--citrus-400); color: #fff; }
+  .btn-citrus.hover { background: var(--citrus-500); }
+  .btn-sm { font-size: 13px; padding: 7px 16px; }
+  .btn-lg { font-size: 16px; padding: 15px 30px; }
+  .ic { width: 16px; height: 16px; display: inline-block; }
+</style></head>
+<body>
+  <div class="head">Buttons</div>
+  <div class="sub">All buttons are pill-shaped (border-radius: 999px). Primary in forest, secondary in cream, ghost for tertiary, citrus reserved for upsell.</div>
+
+  <div class="group">
+    <div class="group-label">Primary · forest</div>
+    <div class="row">
+      <button class="btn btn-primary">สั่งเลย</button>
+      <button class="btn btn-primary hover">สั่งเลย (hover)</button>
+      <button class="btn btn-primary pressed">สั่งเลย (press)</button>
+      <button class="btn btn-primary disabled">สั่งเลย</button>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="group-label">Secondary · ghost · citrus accent</div>
+    <div class="row">
+      <button class="btn btn-secondary">เลือกสาขา</button>
+      <button class="btn btn-ghost">เพิ่มเติม →</button>
+      <button class="btn btn-citrus">+ จับคู่กับเมนูนี้</button>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="group-label">Sizes</div>
+    <div class="row">
+      <button class="btn btn-primary btn-sm">+ เพิ่มในตะกร้า</button>
+      <button class="btn btn-primary">+ เพิ่มในตะกร้า</button>
+      <button class="btn btn-primary btn-lg">ชำระเงิน · ฿234</button>
+    </div>
+  </div>
+</body></html>

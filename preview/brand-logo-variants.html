@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 0; min-height: 260px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-height: 260px; }
+  .panel { display: flex; align-items: center; justify-content: center; padding: 24px; position: relative; }
+  .panel.cream { background: var(--cream-50); }
+  .panel.dark { background: var(--night-900); }
+  .panel.forest { background: var(--forest-500); }
+  .panel img { width: 180px; height: 180px; object-fit: contain; }
+  .panel.dark img, .panel.forest img { filter: brightness(0) invert(1); }
+  .panel.dark .tag, .panel.forest .tag { color: rgba(255,255,255,0.7); }
+  .tag { position: absolute; top: 14px; left: 16px; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-600); font-family: var(--font-body); }
+</style></head>
+<body>
+  <div class="grid">
+    <div class="panel cream"><span class="tag">On cream</span><img src="../assets/logo-makmai-full.png"></div>
+    <div class="panel dark"><span class="tag">Knockout · on dark</span><img src="../assets/logo-makmai-full.png"></div>
+  </div>
+</body></html>

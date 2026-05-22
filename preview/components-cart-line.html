@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 24px 32px; }
+  .head { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .sub { color: var(--ink-600); font-size: 12px; margin-bottom: 18px; }
+
+  .cart { background: #fff; border-radius: 16px; padding: 16px; border: 1px solid var(--cream-300); }
+  .line { display: grid; grid-template-columns: 56px 1fr auto; gap: 14px; align-items: center; padding: 12px 0; border-bottom: 1px dashed var(--cream-300); }
+  .line:last-child { border-bottom: none; }
+  .thumb { width: 56px; height: 56px; border-radius: 12px; }
+  .thumb.orange { background: linear-gradient(135deg, #F0A06A, #E07A2D); }
+  .thumb.green  { background: linear-gradient(135deg, #8FC7A6, #3B9162); }
+  .name { font-family: var(--font-display); font-weight: 600; font-size: 14px; color: var(--ink-900); }
+  .desc { font-family: var(--font-body); font-size: 11.5px; color: var(--ink-600); margin-top: 2px; }
+  .right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+  .price { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--forest-500); font-variant-numeric: tabular-nums; }
+  /* Stepper */
+  .step { display: inline-flex; align-items: center; background: var(--cream-100); border-radius: 999px; border: 1px solid var(--cream-300); }
+  .step button { width: 28px; height: 28px; border-radius: 999px; border: none; background: transparent; cursor: pointer; color: var(--forest-500); font-size: 16px; line-height: 1; font-weight: 700; }
+  .step button:hover { background: var(--forest-50); }
+  .step .qty { font-family: var(--font-display); font-weight: 700; font-size: 13px; min-width: 22px; text-align: center; color: var(--ink-900); font-variant-numeric: tabular-nums; }
+
+  .total { display: flex; justify-content: space-between; align-items: baseline; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--cream-300); }
+  .total .lab { font-family: var(--font-body); font-size: 14px; color: var(--ink-700); }
+  .total .sum { font-family: var(--font-display); font-weight: 700; font-size: 22px; color: var(--ink-900); font-variant-numeric: tabular-nums; }
+</style></head>
+<body>
+  <div class="head">Cart line item · quantity stepper</div>
+  <div class="sub">Stepper is pill-shaped, taps to ±1, never opens a numeric keyboard. Each row is independently editable.</div>
+
+  <div class="cart">
+    <div class="line">
+      <div class="thumb orange"></div>
+      <div>
+        <div class="name">น้ำส้มแครอท ขิงสด</div>
+        <div class="desc">350ml · cold-pressed</div>
+      </div>
+      <div class="right">
+        <div class="step"><button>−</button><span class="qty">2</span><button>+</button></div>
+        <span class="price">฿178</span>
+      </div>
+    </div>
+    <div class="line">
+      <div class="thumb green"></div>
+      <div>
+        <div class="name">น้ำคลอโรฟิลล์</div>
+        <div class="desc">350ml · cold-pressed</div>
+      </div>
+      <div class="right">
+        <div class="step"><button>−</button><span class="qty">1</span><button>+</button></div>
+        <span class="price">฿95</span>
+      </div>
+    </div>
+    <div class="total"><span class="lab">รวม · Total</span><span class="sum">฿273</span></div>
+  </div>
+</body></html>

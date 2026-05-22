@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 28px 32px; }
+  .head { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .sub { color: var(--ink-600); font-size: 12px; margin-bottom: 18px; }
+  .row-wrap { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .group-label { font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-600); margin-bottom: 10px; margin-top: 16px; }
+  .badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-family: var(--font-display); font-weight: 600; font-size: 11px; letter-spacing: 0.02em; }
+  .badge.new   { background: var(--forest-500); color: #fff; }
+  .badge.sale  { background: var(--berry-500); color: #fff; }
+  .badge.upsel { background: var(--citrus-100); color: var(--citrus-600); }
+  .badge.organic { background: var(--forest-50); color: var(--forest-700); border: 1px solid var(--forest-100); }
+  .badge.lowstock { background: var(--cream-200); color: var(--bark-500); }
+  .badge.cold { background: #E6F1F5; color: #2E6F8E; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; font-family: var(--font-body); font-weight: 500; font-size: 13px; background: var(--cream-100); color: var(--ink-800); border: 1px solid var(--cream-300); cursor: pointer; }
+  .chip.active { background: var(--forest-500); color: #fff; border-color: var(--forest-500); }
+  .chip .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: 0.7; }
+  .triangle { color: currentColor; font-size: 9px; }
+</style></head>
+<body>
+  <div class="head">Badges & chips</div>
+  <div class="sub">Pill-shaped tags. Badges are non-interactive, chips are interactive filters.</div>
+
+  <div class="group-label">Badges</div>
+  <div class="row-wrap">
+    <span class="badge new">NEW · ใหม่</span>
+    <span class="badge sale">-20% · ลด</span>
+    <span class="badge upsel">+ Pair</span>
+    <span class="badge organic"><span class="triangle">▲</span> ออร์แกนิค</span>
+    <span class="badge cold">❄ Cold-pressed</span>
+    <span class="badge lowstock">เหลือ 3 ขวด</span>
+  </div>
+
+  <div class="group-label">Filter chips</div>
+  <div class="row-wrap">
+    <span class="chip active"><span class="dot"></span>ทั้งหมด</span>
+    <span class="chip">น้ำผลไม้</span>
+    <span class="chip">สมูทตี้</span>
+    <span class="chip">สลัด</span>
+    <span class="chip">โปรตีน</span>
+    <span class="chip">น้ำตาลต่ำ</span>
+  </div>
+</body></html>

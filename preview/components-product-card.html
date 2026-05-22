@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body { padding: 24px 32px; }
+  .head { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .sub { color: var(--ink-600); font-size: 12px; margin-bottom: 18px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 6px rgb(64 40 16 / 0.06), 0 1px 2px rgb(64 40 16 / 0.04); border: 1px solid rgba(0,0,0,0.02); display: flex; flex-direction: column; }
+  .img { aspect-ratio: 4/3; position: relative; display: flex; align-items: center; justify-content: center; font-family: var(--font-body); font-size: 10px; letter-spacing: 0.15em; color: rgba(255,255,255,0.7); text-transform: uppercase; }
+  .img.orange { background: linear-gradient(135deg, #F0A06A 0%, #E07A2D 70%); }
+  .img.green  { background: linear-gradient(135deg, #8FC7A6 0%, #3B9162 70%); }
+  .img.berry  { background: linear-gradient(135deg, #E08F8E 0%, #B33A3A 70%); }
+  .badge { position: absolute; top: 10px; left: 10px; padding: 4px 10px; border-radius: 999px; font-family: var(--font-display); font-weight: 700; font-size: 10px; letter-spacing: 0.04em; background: var(--berry-500); color: #fff; }
+  .badge.new { background: var(--forest-500); }
+  .heart { position: absolute; top: 10px; right: 10px; width: 28px; height: 28px; border-radius: 999px; background: rgba(255,255,255,0.85); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; color: var(--ink-700); font-size: 14px; }
+  .body { padding: 14px 14px 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .eyebrow { font-family: var(--font-body); font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--forest-500); }
+  .name { font-family: var(--font-display); font-weight: 600; font-size: 15px; color: var(--ink-900); line-height: 1.2; }
+  .desc { font-family: var(--font-body); font-size: 11.5px; color: var(--ink-600); line-height: 1.4; }
+  .price-row { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
+  .price { font-family: var(--font-display); font-weight: 700; font-size: 18px; color: var(--forest-500); font-variant-numeric: tabular-nums; }
+  .strike { font-family: var(--font-display); font-weight: 500; font-size: 13px; color: var(--ink-600); text-decoration: line-through; margin-left: 6px; }
+  .add { width: 32px; height: 32px; border-radius: 999px; background: var(--forest-500); color: #fff; border: none; cursor: pointer; font-size: 18px; line-height: 1; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgb(0 36 16 / 0.25); }
+</style></head>
+<body>
+  <div class="head">Product card</div>
+  <div class="sub">Image-led, soft shadow, single primary action. The "+ add" pill is sized as a 44×44 effective tap target with surrounding whitespace.</div>
+  <div class="grid">
+    <div class="card">
+      <div class="img orange"><span class="badge new">NEW</span><span class="heart">♡</span>photo · carrot-ginger</div>
+      <div class="body">
+        <span class="eyebrow">COLD-PRESSED</span>
+        <span class="name">น้ำส้มแครอท ขิงสด</span>
+        <span class="desc">350ml · ไม่ใส่น้ำตาล · วิตามินซีสูง</span>
+        <div class="price-row"><div><span class="price">฿89</span></div><button class="add">+</button></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img green"><span class="heart">♡</span>photo · green detox</div>
+      <div class="body">
+        <span class="eyebrow">SIGNATURE</span>
+        <span class="name">น้ำคลอโรฟิลล์</span>
+        <span class="desc">350ml · ผักโขม แอปเปิ้ล มะนาว</span>
+        <div class="price-row"><div><span class="price">฿95</span></div><button class="add">+</button></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img berry"><span class="badge">-20%</span><span class="heart">♡</span>photo · berry bowl</div>
+      <div class="body">
+        <span class="eyebrow">SMOOTHIE BOWL</span>
+        <span class="name">เบอร์รี่โบลว์</span>
+        <span class="desc">ราสเบอร์รี่ กราโนล่า เมล็ดเจีย</span>
+        <div class="price-row"><div><span class="price">฿115</span><span class="strike">฿145</span></div><button class="add">+</button></div>
+      </div>
+    </div>
+  </div>
+</body></html>

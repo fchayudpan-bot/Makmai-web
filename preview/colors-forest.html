@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .title { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .sub { color: var(--ink-600); font-size: 12px; margin-bottom: 14px; }
+  .scale { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; }
+  .swatch { min-height: 78px; padding: 10px; border-radius: 10px; display: flex; flex-direction: column; justify-content: space-between; }
+  .swatch .step { font-size: 10px; font-weight: 700; opacity: 0.8; }
+  .swatch .hex { font-size: 9.5px; font-family: var(--font-mono); opacity: 0.85; }
+</style></head>
+<body>
+  <div class="title">Forest — primary brand green <span class="hex" style="font-family:var(--font-mono);font-weight:400;font-size:11px;color:var(--ink-600);">forest-50 → forest-900</span></div>
+  <div class="sub">Sampled directly from the Makmai logo (#006030). Used for brand mark, primary CTAs, prices, and success states.</div>
+  <div class="scale">
+    <div class="swatch" style="background:#EAF3EE;color:#00351B"><span class="step">50</span><span class="hex">#EAF3EE</span></div>
+    <div class="swatch" style="background:#CFE4D8;color:#00351B"><span class="step">100</span><span class="hex">#CFE4D8</span></div>
+    <div class="swatch" style="background:#9CC8B0;color:#00351B"><span class="step">200</span><span class="hex">#9CC8B0</span></div>
+    <div class="swatch" style="background:#6BAC89;color:#00241B"><span class="step">300</span><span class="hex">#6BAC89</span></div>
+    <div class="swatch" style="background:#3B9162;color:#fff"><span class="step">400</span><span class="hex">#3B9162</span></div>
+    <div class="swatch" style="background:#006030;color:#fff;outline:2px solid #fff;outline-offset:-4px"><span class="step">500 ★</span><span class="hex">#006030</span></div>
+    <div class="swatch" style="background:#00532A;color:#fff"><span class="step">600</span><span class="hex">#00532A</span></div>
+    <div class="swatch" style="background:#004523;color:#fff"><span class="step">700</span><span class="hex">#004523</span></div>
+    <div class="swatch" style="background:#00351B;color:#fff"><span class="step">800</span><span class="hex">#00351B</span></div>
+    <div class="swatch" style="background:#002413;color:#fff"><span class="step">900</span><span class="hex">#002413</span></div>
+  </div>
+</body></html>
