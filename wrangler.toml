@@ -1,2 +1,5 @@
 name = "makmai-web"
-pages_build_output_dir = "ui_kits/web"
+compatibility_date = "2026-05-22"
+
+[assets]
+directory = "./ui_kits/web"
