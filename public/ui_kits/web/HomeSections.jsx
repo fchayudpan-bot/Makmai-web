@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------- Hero */
 function Hero({ lang, onShopNow }) {
   return (
-    <section style={{
+    <section className="mm-hero" style={{
       position: "relative",
       background: "radial-gradient(circle at 80% 20%, var(--cream-200) 0%, var(--cream-50) 60%)",
       borderRadius: 28, overflow: "hidden",
@@ -61,7 +61,7 @@ function Hero({ lang, onShopNow }) {
             {lang === "th" ? "ดูเมนูทั้งหมด →" : "Browse menu →"}
           </button>
         </div>
-        <div style={{
+        <div className="mm-hero-badges" style={{
           display: "flex", gap: 24, marginTop: 36,
           fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-700)",
         }}>
@@ -79,7 +79,7 @@ function Hero({ lang, onShopNow }) {
       </div>
 
       {/* Right visual — hero product photo */}
-      <div style={{ position: "relative", height: 360, display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <div className="mm-hero-img" style={{ position: "relative", height: 360, display: "flex", justifyContent: "center", alignItems: "center" }}>
         <div style={{
           width: "100%", height: "100%", borderRadius: 24,
           overflow: "hidden",
@@ -198,11 +198,11 @@ function Footer({ lang }) {
       background: "var(--bark-500)", color: "var(--cream-100)",
       padding: "48px 0 32px", marginTop: 64, borderRadius: "28px 28px 0 0",
     }}>
-      <div style={{
+      <div className="mm-footer-grid" style={{
         maxWidth: 1280, margin: "0 auto", padding: "0 32px",
         display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr", gap: 32,
       }}>
-        <div>
+        <div className="mm-footer-brand">
           <div style={{
             fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 32,
             color: "var(--cream-50)", lineHeight: 1,
@@ -273,7 +273,7 @@ function Footer({ lang }) {
           </div>
         ))}
       </div>
-      <div style={{
+      <div className="mm-footer-bottom" style={{
         maxWidth: 1280, margin: "32px auto 0", padding: "20px 32px 0",
         borderTop: "1px solid rgba(255,255,255,0.12)",
         display: "flex", justifyContent: "space-between",

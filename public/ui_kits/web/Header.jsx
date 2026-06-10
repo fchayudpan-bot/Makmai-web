@@ -11,20 +11,21 @@ function Header({ branch, onOpenBranch, cartCount, onOpenCart, lang, onToggleLan
       backdropFilter: "blur(12px)",
       borderBottom: "1px solid var(--cream-300)",
     }}>
-      <div style={{
+      <div className="mm-header-inner" style={{
         maxWidth: 1280, margin: "0 auto", padding: "12px 24px",
         display: "flex", alignItems: "center", gap: 18,
       }}>
         {/* Logo */}
         <a href="#" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
           <img src="../../assets/logo-makmai-full.png" alt="Makmai"
+               className="mm-logo"
                style={{ width: 125, height: 125, objectFit: "contain" }} />
           <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
           </div>
         </a>
 
         {/* Branch pill */}
-        <button onClick={onOpenBranch} style={{
+        <button onClick={onOpenBranch} className="mm-branch-pill" style={{
           display: "flex", alignItems: "center", gap: 8,
           background: "var(--forest-50)", color: "var(--forest-700)",
           border: "1px solid var(--forest-100)", borderRadius: 999,
@@ -32,12 +33,12 @@ function Header({ branch, onOpenBranch, cartCount, onOpenCart, lang, onToggleLan
           fontWeight: 600, cursor: "pointer", marginLeft: 6,
         }}>
           <Icon name="pin" size={16} color="var(--forest-500)" />
-          <span>{TH ? branch.name_th : branch.name_en}</span>
+          <span className="mm-branch-name">{TH ? branch.name_th : branch.name_en}</span>
           <Icon name="chevron-down" size={14} />
         </button>
 
         {/* Nav */}
-        <nav style={{ display: "flex", gap: 22, marginLeft: 16 }}>
+        <nav className="mm-nav" style={{ display: "flex", gap: 22, marginLeft: 16 }}>
           {[
             { th: "เมนู", en: "Menu", href: "#menu-section" },
             { th: "ออร์เดอร์", en: "Orders", href: "#" },
@@ -55,12 +56,12 @@ function Header({ branch, onOpenBranch, cartCount, onOpenCart, lang, onToggleLan
         <div style={{ flex: 1 }} />
 
         {/* Search */}
-        <button title="Search" style={iconBtn} onClick={() => setSearchOpen(s => !s)}>
+        <button title="Search" className="mm-search-btn" style={iconBtn} onClick={() => setSearchOpen(s => !s)}>
           <Icon name="search" size={18} />
         </button>
 
         {/* Language toggle */}
-        <button title="Language" style={iconBtn} onClick={onToggleLang}>
+        <button title="Language" className="mm-lang-btn" style={iconBtn} onClick={onToggleLang}>
           <Icon name="globe" size={18} />
           <span style={{ fontSize: 11, fontWeight: 600, marginLeft: 4 }}>{TH ? "TH" : "EN"}</span>
         </button>
@@ -68,7 +69,7 @@ function Header({ branch, onOpenBranch, cartCount, onOpenCart, lang, onToggleLan
         {/* User — login or avatar+logout */}
         {user ? (
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <div style={{
+            <div className="mm-user-pill" style={{
               display: "flex", alignItems: "center", gap: 8,
               background: "var(--forest-50)", border: "1px solid var(--forest-100)",
               borderRadius: 999, padding: "6px 12px 6px 8px",
@@ -82,7 +83,7 @@ function Header({ branch, onOpenBranch, cartCount, onOpenCart, lang, onToggleLan
               }}>
                 {user.name.charAt(0).toUpperCase()}
               </div>
-              <span style={{
+              <span className="mm-user-name" style={{
                 fontFamily: "var(--font-body)", fontSize: 13, fontWeight: 600,
                 color: "var(--forest-700)", maxWidth: 90,
                 overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",

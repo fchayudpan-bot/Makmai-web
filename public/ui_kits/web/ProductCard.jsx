@@ -100,7 +100,7 @@ function ProductCard({ p, lang, onAdd, onFav, faved }) {
 /* ------------------------------------------------------------- ProductGrid */
 function ProductGrid({ products, lang, onAdd, favs, onFav }) {
   return (
-    <div style={{
+    <div className="mm-product-grid" style={{
       display: "grid", gap: 18,
       gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
     }}>
@@ -115,7 +115,7 @@ function ProductGrid({ products, lang, onAdd, favs, onFav }) {
 /* ----------------------------------------------------------- CategoryChips */
 function CategoryChips({ categories, active, onChange, lang }) {
   return (
-    <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+    <div className="mm-chips-wrap" style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
       {categories.map(c => {
         const isActive = c.id === active;
         return (

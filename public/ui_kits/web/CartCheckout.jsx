@@ -62,7 +62,7 @@ function AuthModal({ onClose, onSuccess, lang }) {
   return (
     <>
       <Scrim onClick={onClose} />
-      <div style={{
+      <div className="mm-modal" style={{
         position: "fixed", left: "50%", top: "50%", transform: "translate(-50%,-50%)",
         width: "min(480px,94vw)", background: "var(--cream-50)", borderRadius: 22,
         boxShadow: "0 24px 60px rgb(64 40 16 / 0.22)", zIndex: 60, overflow: "hidden",
@@ -200,7 +200,7 @@ function BranchModal({ branch, onChange, onClose, lang }) {
   return (
     <>
       <Scrim onClick={onClose} />
-      <div style={{
+      <div className="mm-modal" style={{
         position: "fixed", left: "50%", top: "50%", transform: "translate(-50%,-50%)",
         width: "min(560px,92vw)", background: "var(--cream-50)", borderRadius: 22,
         boxShadow: "0 24px 60px rgb(64 40 16 / 0.20)", zIndex: 60, padding: 24,
@@ -267,7 +267,7 @@ function CartDrawer({ items, onAdd, onRemove, onCheckout, onClose, lang, upsell,
   return (
     <>
       <Scrim onClick={onClose} />
-      <aside style={{
+      <aside className="mm-cart-drawer" style={{
         position: "fixed", right: 0, top: 0, bottom: 0, width: "min(440px,100vw)",
         background: "var(--cream-50)", zIndex: 60,
         boxShadow: "-16px 0 40px rgb(64 40 16 / 0.14)",
@@ -398,7 +398,7 @@ function CheckoutSheet({ items, branch, onConfirm, onClose, lang, user, onChange
   return (
     <>
       <Scrim onClick={onClose} />
-      <div style={{
+      <div className="mm-checkout-sheet" style={{
         position: "fixed", left: "50%", top: "50%", transform: "translate(-50%,-50%)",
         width: "min(560px,94vw)", maxHeight: "92vh", overflowY: "auto",
         background: "var(--cream-50)", borderRadius: 22,
@@ -581,7 +581,7 @@ function Confirmation({ onClose, lang, items, branch }) {
   return (
     <>
       <Scrim onClick={onClose} />
-      <div style={{
+      <div className="mm-confirm-modal" style={{
         position: "fixed", left: "50%", top: "50%", transform: "translate(-50%,-50%)",
         width: "min(440px,92vw)", background: "var(--cream-50)", borderRadius: 22,
         boxShadow: "0 24px 60px rgb(64 40 16 / 0.22)", zIndex: 60,

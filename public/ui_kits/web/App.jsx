@@ -125,14 +125,14 @@ function App() {
         onLogout={handleLogout}
       />
 
-      <main style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px" }}>
+      <main className="mm-main" style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px" }}>
         <Hero lang={lang} onShopNow={() => {
           document.getElementById("menu-section")?.scrollIntoView({ behavior: "smooth" });
         }} />
 
         {/* Featured row */}
-        <section style={{ margin: "16px 0 8px" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 18 }}>
+        <section className="mm-featured-section" style={{ margin: "16px 0 8px" }}>
+          <div className="mm-section-head" style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 18 }}>
             <div>
               <div style={{
                 fontFamily: "var(--font-body)", fontSize: 11, fontWeight: 600,
@@ -153,7 +153,7 @@ function App() {
         </section>
 
         {/* Full menu */}
-        <section id="menu-section" style={{ marginTop: 48 }}>
+        <section id="menu-section" className="mm-menu-section" style={{ marginTop: 48 }}>
           <div style={{ marginBottom: 16 }}>
             <div style={{
               fontFamily: "var(--font-body)", fontSize: 11, fontWeight: 600,
@@ -173,7 +173,7 @@ function App() {
         </section>
 
         {/* Why Makmai strip */}
-        <section style={{
+        <section className="mm-why-strip" style={{
           margin: "64px 0 16px", padding: "40px 36px", borderRadius: 24,
           background: "var(--forest-500)", color: "#fff",
           display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 28,
